@@ -137,3 +137,15 @@ p {
   position: absolute;
   z-index: 2;
 }
+
+.mr-auto {
+  display: none;
+}
+
+.navbar-brand {
+  display: none;
+}
+
+.web-footer {
+  display: none;
+}
