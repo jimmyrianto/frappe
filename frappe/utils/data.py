@@ -622,7 +622,7 @@ def money_in_words(number, main_currency = None, fraction_currency=None):
 		if cint(fraction):
 			out = out + ' ' + _('and') + ' ' + _(in_words(fraction, in_million).title()) + ' ' + fraction_currency
 
-	return out + ' ' + _('only.')
+	return out + ' ' + _('.')
 
 #
 # convert number to words
@@ -634,11 +634,12 @@ def in_words(integer, in_million=True):
 	locale = 'en_IN' if not in_million else frappe.local.lang
 	integer = int(integer)
 	try:
+		locale = 'id_ID'
 		ret = num2words(integer, lang=locale)
 	except NotImplementedError:
-		ret = num2words(integer, lang='en')
+		ret = num2words(integer, lang='id_ID')
 	except OverflowError:
-		ret = num2words(integer, lang='en')
+		ret = num2words(integer, lang='id_ID')
 	return ret.replace('-', ' ')
 
 def is_html(text):
