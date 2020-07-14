@@ -1,5 +1,5 @@
 # Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
-# MIT License. See license.txt
+# MIT License. See license.txt 
 """
 globals attached to frappe module
 + some utility functions that should probably be moved
